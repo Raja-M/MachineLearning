@@ -1,5 +1,8 @@
 a = "big"
 b = "small"
+
+print("Hello" == "hello")
+
 # print(a < b)
 scores_1 = [65, 82, 76]
 scores_2 = [65,90]
@@ -15,3 +18,8 @@ height = 52
 is_allowed = age >=8 or height
 not_allowed=not is_allowed
 print(not_allowed)
+
+
+print("Hello" == "hello")
+
+print("Hello" != "hello")
