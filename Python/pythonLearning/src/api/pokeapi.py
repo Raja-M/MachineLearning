@@ -4,7 +4,17 @@ base_url = "https://pokeapi.co/api/v2"
 
 def get_pokemon_info(name):
     print ( "Getting data for Name : " + name)
+    url = f"{base_url}/pokemon/{name}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        pokemon_data = response.json()
+        return pokemon_data
+    else:
+        print(f"Failed to retrieve data {response.status_code}")
 
+name = "pikachu"
+pokemon_info = get_pokemon_info(name)
 
-name = "John";
-get_pokemon_info(name);
+if pokemon_info:
+    print(f"Name : {pokemon_info["name"]}".capitalize() )
+    print(f"Id : {pokemon_info["id"]}")
