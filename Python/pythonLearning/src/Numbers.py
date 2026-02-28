@@ -18,6 +18,20 @@
 # z = float("3")
 # print(z)
 
+x=17/3
+y=17//3
+z=17%3
+print(x,y,z)
+x=5**3
+print(x)
+
+word="python"
+print(word[1])
+print(word[-1])
+#slicing
+print(word[2:4])
+print(len(word))
+
 # import math
 # print(math.pow(10, 2))
 
