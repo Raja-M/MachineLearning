@@ -1,4 +1,7 @@
 
+for f in fruits:
+    print(f , len(f))
+
 # hello = "Hello"
 # print(len(hello))
 # print(hello[0])
