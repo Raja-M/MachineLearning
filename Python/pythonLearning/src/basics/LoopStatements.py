@@ -1,7 +1,3 @@
-fruits = ["apple", "berry", "cherry"]
-print(len(fruits))
-print(fruits[0])
-print("apple" in fruits)
 
 # hello = "Hello"
 # print(len(hello))
@@ -17,4 +13,20 @@ print("apple" in fruits)
 #     if num % 2 == 0:
 #         print(num)
 #         break
+users={'hans':'active','mohan':'inactive','rekha':'active'}
+for user,status in list(users.items()):
+    if status=='inactive':
+        del users[user]
+print(users)
+active_users={}
+for user,status in users.items():
+    if status=='active':
+        active_users[user]=status
+print(active_users)
+#fibonacci
+a=0
+b=1
+for num in range(10):
+    print(a)
+    a,b=b,a+b
 

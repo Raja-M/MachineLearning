@@ -2,15 +2,73 @@ import numpy as np
 
 print ("Hello Numpy")
 
-# arr = np.array([1, 2, 3, 4, 5])
-# print(arr)
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+print(type(arr))
 
-# arr0204 = np.array([
+arr=np.array([1,2,3],ndmin=5)
+print(arr)
+print("number of dimensions :",arr.ndim)
+
+print(arr[0])
+print(arr.dtype)
+
+arr = np.array([1.1, 2.1, 3.1])
+newarr = arr.astype('i')
+print(newarr)
+print(newarr.dtype)
+print("=======")
+original_arr=np.array([1,2,3,4])
+x=original_arr.copy()
+y=original_arr.view()
+original_arr[0]=3
+y[1]=3
+print(original_arr)
+print(x)
+print(y)
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+newarr = arr.reshape(-1)#convert array to 1D
+print(newarr)
+
+arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+for x in np.nditer(arr):#iterations 
+  print(x)
+#join
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+
+arr = np.concatenate((arr1, arr2), axis=1)
+arr = np.stack((arr1, arr2), axis=1)
+arr = np.hstack((arr1, arr2))#to stack along rows.
+arr = np.vstack((arr1, arr2)) #to stack along columns.
+arr = np.dstack((arr1, arr2))#to stack along height, which is the same as depth.
+#split
+arr = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+newarr = np.array_split(arr, 3)
+print(newarr)
+newarr = np.hsplit(arr, 3)
+print(newarr)
+x = np.where(arr%2 == 0)#array elements satisfy this condition return indexes
+print(x)
+#search
+arr = np.array([6, 7, 8, 9])
+x = np.searchsorted(arr, 7, side='right')
+print(x)
+#sort
+arr = np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(arr))
+#filter
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+filter_arr = arr % 2 == 0
+newarr = arr[filter_arr]
+print(filter_arr)
+print(newarr)
+
+  # arr0204 = np.array([
 #     [1, 2, 3, 4], 
 #     [5, 6, 7, 8], 
 #     [9, 10, 11, 12]])
-
-
 # print(arr0204)
 # print(arr0204[1,3])
 

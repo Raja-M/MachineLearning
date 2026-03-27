@@ -21,10 +21,11 @@ print(f'my hovercraft is full of {animals!r}.')
 
 x=[1,'simple','list']
 json.dumps(x)
-with open("samplefile","+r") as f:
-    read_data=f.read()#or
-    read_data=f.readline()#or read single line
-    read_data=f.readlines()#read entire line
-    f.write("this is a test")
-    f.tell()
-    f.seek(5)
+
+# with open("samplefile","+r") as f:
+#     read_data=f.read()#or
+#     read_data=f.readline()#or read single line
+#     read_data=f.readlines()#read entire line
+#     f.write("this is a test")
+#     f.tell()
+#     f.seek(5)
