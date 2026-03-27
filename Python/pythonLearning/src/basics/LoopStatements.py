@@ -3,6 +3,9 @@ print(len(fruits))
 print(fruits[0])
 print("apple" in fruits)
 
+for f in fruits:
+    print(f , len(f))
+
 # hello = "Hello"
 # print(len(hello))
 # print(hello[0])
